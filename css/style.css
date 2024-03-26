@@ -16,11 +16,6 @@ html {
     font-size: 10px;
 }
 
-h1{
-    font-size: 4rem;
-    font-weight: bold;
-}
-
 p {
     font-size: 1.8rem;
     line-height: 1.5;
@@ -67,16 +62,32 @@ body {
     text-align: center;
 }
 
-#announcement-bar >h3 {
+#announcement-bar > h3 {
     color: var(--white);
     font-weight: bold;
     font-size: 1.8rem;
     margin: .8rem 0;
 }
 
+@media only screen and (max-width: 450px) {
+
+    #announcement-bar > h3 {
+        font-size: 1.6rem;
+    }
+}
+
 header {
-    background-color: var(--green);
+    background: var(--green);
     border-bottom: 1px solid var(--brown);
+    background: linear-gradient(
+        180deg,
+        hsl(66deg 8% 45%) 0%,
+        hsl(66deg 8% 49%) 36%,
+        hsl(64deg 7% 53%) 55%,
+        hsl(64deg 7% 57%) 67%,
+        hsl(65deg 6% 61%) 80%,
+        hsl(66deg 6% 65%) 100%
+        );
     height: max-content;
     display: grid;
     grid-template-columns: minmax(0px, 1fr) repeat(4, minmax(0, 270px)) minmax(0px, 1fr);
@@ -114,6 +125,50 @@ header {
     max-width: 375px;
 }
 
+@media only screen and (max-width: 1000px) {
+
+    #header-logo {
+        max-width: 325px;
+    }
+
+    #header-phone > a {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    #header-logo {
+        max-width: 300px;
+    }
+
+    #header-phone > a {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #header-logo {
+        grid-column: span 6;
+    }
+
+    #header-phone {
+        grid-column: span 6;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    #header-logo {
+        max-width: 250px;
+    }
+
+    #header-phone > a {
+        font-size: 1.4rem;
+    }
+}
+
 #banner {
     position: relative;
 }
@@ -124,18 +179,69 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 250px;
+    bottom: 20%;
     padding: 1rem;
     color: var(--white);
     line-height: 1.5;
     border: 2px solid var(--white);
     border-radius: 10px;
     background-color: rgba(0, 0, 0, .4);
+    width: max-content;
 }
 
 #brand-logo {
     max-width: 175px;
     margin-right: 2rem;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1225px) {
+
+    #brand-logo {
+        max-width: 125px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 925px) {
+
+    #brand-logo {
+        max-width: 75px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+
+    #banner-text {
+        padding: .5rem;
+        bottom: 15%;
+    }
+
+    #brand-logo {
+        max-width: 50px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    #banner-text {
+        bottom: 10%;
+    }
 }
 
 main {
@@ -147,7 +253,7 @@ main {
 
 #heading {
     grid-column: span 12;
-    background-color: var(--green);
+    background: var(--green);
     text-align: center;
     border-radius: 5px;
 }
@@ -161,6 +267,7 @@ main {
 
 #map-desc {
     grid-column: 1 / 7;
+    margin: 2rem;
 }
 
 #map-legend {
@@ -173,6 +280,33 @@ main {
     align-self: end;
 }
 
+@media only screen and (max-width: 850px) {
+
+    #map-desc {
+        grid-column: span 12;
+        grid-row: 2;
+    }
+
+    #map {
+        grid-row: 3 / 5;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    #map {
+        grid-column: span 12;
+        grid-row: 3;
+    }
+
+    #map-legend {
+        grid-column: span 12;
+        grid-row: 4;
+        margin-top: 2rem;
+    }
+
+}
+
 footer {
     background-color: var(--black);
     height: max-content;
@@ -181,4 +315,11 @@ footer {
 
 footer > p {
     color: var(--white);
+}
+
+@media only screen and (max-width: 450px) {
+
+    footer > p {
+        font-size: 1.6rem;
+    }
 }

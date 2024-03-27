@@ -105,7 +105,7 @@ header {
     font-weight: bold;
     font-size: 2rem;
     background-color: var(--brown);
-    padding: 1rem;
+    padding: .8rem;
     border-radius: 0 0 10px 10px;
 
     display: inline-flex;
@@ -166,6 +166,7 @@ header {
 
     #header-phone > a {
         font-size: 1.4rem;
+        padding: .5rem;
     }
 }
 
@@ -248,14 +249,15 @@ main {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 90px));
-    margin: 3rem 0;
+    margin: 0;
 }
 
 #heading {
     grid-column: span 12;
-    background: var(--green);
+    background: rgb(37, 116, 143);
     text-align: center;
     border-radius: 5px;
+    margin: 3rem 0;
 }
 
 #heading > h2 {
@@ -265,9 +267,16 @@ main {
     margin: 1rem 0;
 }
 
+@media only screen and (max-width: 450px) {
+
+    #heading > h2 {
+        font-size: 2rem;
+    }
+}
+
 #map-desc {
     grid-column: 1 / 7;
-    margin: 2rem;
+    margin: 0 2rem 2rem 2rem;
 }
 
 #map-legend {
@@ -278,6 +287,21 @@ main {
     grid-column: 7 / 13;
     grid-row: 2 / 4;
     align-self: end;
+}
+
+#master-desc {
+    grid-column: span 12;
+    justify-self: center;
+    margin: 0 2rem 2rem 2rem;
+}
+
+#map-master {
+    grid-column: span 12;
+}
+
+#legend-master {
+    grid-column: span 12;
+    justify-self: center;
 }
 
 @media only screen and (max-width: 850px) {
@@ -311,6 +335,7 @@ footer {
     background-color: var(--black);
     height: max-content;
     text-align: center;
+    margin-top: 2rem;
 }
 
 footer > p {

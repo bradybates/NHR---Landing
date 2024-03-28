@@ -172,6 +172,7 @@ header {
 
 #banner {
     position: relative;
+    justify-self: center;
 }
 
 #banner-text {
